@@ -1,10 +1,8 @@
 # Використання базового образу Python
-FROM python:3.10-alpine
+FROM python:3.10-slim
 
 # Встановлення робочої директорії
 WORKDIR /app
-
-RUN apk add --no-cache gcc musl-dev python3-dev libffi-dev g++ make
 
 # Копіювання файлу залежностей та їх встановлення
 COPY requirements.txt .
